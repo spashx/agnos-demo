@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+agnos-process/PERF-CENTER.html
+agnos-process/PERF-CENTER.json
+agnos-process/PERF-CENTER.data.js
+agnos-process/_sessionstate/session.yaml
