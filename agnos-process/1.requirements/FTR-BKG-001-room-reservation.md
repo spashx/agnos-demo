@@ -60,7 +60,7 @@ of rooms, the creation and cancellation of reservations, and the rules that keep
 - **Statement**: IF the attendee count is greater than the capacity of the room, THEN the booking service
   SHALL reject the request with a capacity error.
 - **Rationale**: A meeting must fit in the room.
-- **Priority**: Should
+- **Priority**: Must
 - **Acceptance Criteria** (Gherkin):
   - **Given** a room of capacity 6
   - **When** a reservation for 7 attendees is requested
