@@ -18,7 +18,7 @@ ADR-BKG-002|1-55|Accepted|Initial reservation storage
 DEC-BKG-003|14-17||In-memory dictionary for reservations
 @agnos-process/3.plan/PLAN-BKG-001-core-booking.md
 PLAN-BKG-001|1-111||Core booking rules
-TASK-BKG-001|16-32|Not Started|Implement booking domain model
+TASK-BKG-001|16-32|Done|Implement booking domain model
 TASK-BKG-002|33-48|Not Started|Implement reservation creation
 TASK-BKG-003|49-64|Not Started|Implement overlap rule
 TASK-BKG-004|65-80|Not Started|Implement room availability rules

@@ -15,7 +15,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-BKG-001: Implement booking domain model
 - **Tier**: M
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Create the Python project (`service/pyproject.toml`), the domain objects (room,
   reservation, status), the domain errors and the room catalog.
 - **Requirement refs**: RQ-BKG-001
@@ -26,7 +26,7 @@ This plan implements the tasks in the format specified below.
   - **Then** each room is returned with its identifier, name, capacity and open flag
 - **Dependencies**: None
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `python -m unittest tests.test_catalog tests.test_domain` (in `service/`): Ran 14 tests, OK.
 - **Assumptions**: A room with a capacity below 1 is refused at creation (the requirement gives the minimum
   but not the reaction).
 
