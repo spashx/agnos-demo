@@ -49,7 +49,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-BKG-003: Implement overlap rule
 - **Tier**: M
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Add the rule that rejects a request overlapping a Confirmed reservation of the same room.
 - **Requirement refs**: RQ-BKG-003
 - **ADR refs**: ADR-BKG-001 (DEC-BKG-002)
@@ -60,7 +60,8 @@ This plan implements the tasks in the format specified below.
   - **And** a reservation from 11:00 to 12:00 is accepted
 - **Dependencies**: TASK-BKG-002
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `python -m unittest tests.test_overlap_rule` (in `service/`): Ran 5 tests, OK, including the
+  back-to-back case.
 - **Assumptions**: Cancelled reservations are ignored by the rule (a cancelled interval can be booked again).
 
 ### TASK-BKG-004: Implement room availability rules
