@@ -51,6 +51,7 @@ def make_request(start: datetime, end: datetime) -> ReservationRequest:
 class OverlapRuleTest(unittest.TestCase):
     """Tests of OverlapRule (RQ-BKG-003)."""
 
+    # RQ-BKG-003
     def test_given_reservation_from_ten_to_eleven_when_request_overlaps_then_conflict_names_it(self) -> None:
         # Given
         request = make_request(FIRST_START + HALF_HOUR, FIRST_END + HALF_HOUR)
