@@ -17,10 +17,10 @@ DEC-BKG-002|19-22||Rule objects per validity check
 ADR-BKG-002|1-55|Accepted|Initial reservation storage
 DEC-BKG-003|14-17||In-memory dictionary for reservations
 @agnos-process/3.plan/PLAN-BKG-001-core-booking.md
-PLAN-BKG-001|1-113||Core booking rules
+PLAN-BKG-001|1-114||Core booking rules
 TASK-BKG-001|16-32|Done|Implement booking domain model
 TASK-BKG-002|33-49|Done|Implement reservation creation
 TASK-BKG-003|50-66|Done|Implement overlap rule
-TASK-BKG-004|67-82|Not Started|Implement room availability rules
-TASK-BKG-005|83-99|Not Started|Implement reservation cancellation
-TASK-BKG-006|100-113|Not Started|Name conflicting reservation in message
+TASK-BKG-004|67-83|Done|Implement room availability rules
+TASK-BKG-005|84-100|Not Started|Implement reservation cancellation
+TASK-BKG-006|101-114|Not Started|Name conflicting reservation in message

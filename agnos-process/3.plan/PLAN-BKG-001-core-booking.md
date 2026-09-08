@@ -66,7 +66,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-BKG-004: Implement room availability rules
 - **Tier**: M
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Add the rule that rejects too many attendees and the rule that rejects a closed room.
 - **Requirement refs**: RQ-BKG-004, RQ-BKG-006
 - **ADR refs**: ADR-BKG-001 (DEC-BKG-002)
@@ -77,7 +77,8 @@ This plan implements the tasks in the format specified below.
   - **And** 6 attendees are accepted
 - **Dependencies**: TASK-BKG-002
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `python -m unittest tests.test_capacity_rule tests.test_room_open_rule` (in `service/`):
+  Ran 5 tests, OK.
 - **Assumptions**: None
 
 ### TASK-BKG-005: Implement reservation cancellation
