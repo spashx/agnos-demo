@@ -83,7 +83,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-BKG-005: Implement reservation cancellation
 - **Tier**: M
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Add the use case that cancels a reservation that has not started and refuses one that
   has, using an injected clock.
 - **Requirement refs**: RQ-BKG-005
@@ -95,7 +95,7 @@ This plan implements the tasks in the format specified below.
   - **And** cancelling a reservation that has started raises an already-started error
 - **Dependencies**: TASK-BKG-002
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `python -m unittest tests.test_cancel_reservation` (in `service/`): Ran 5 tests, OK.
 - **Assumptions**: Cancelling an already Cancelled reservation does nothing and raises no error.
 
 ### TASK-BKG-006: Name conflicting reservation in message
