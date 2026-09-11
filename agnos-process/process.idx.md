@@ -23,4 +23,4 @@ TASK-BKG-002|33-49|Done|Implement reservation creation
 TASK-BKG-003|50-66|Done|Implement overlap rule
 TASK-BKG-004|67-83|Done|Implement room availability rules
 TASK-BKG-005|84-100|Done|Implement reservation cancellation
-TASK-BKG-006|101-114|Not Started|Name conflicting reservation in message
+TASK-BKG-006|101-114|Done|Name conflicting reservation in message

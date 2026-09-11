@@ -18,7 +18,7 @@ RESERVATION_NOT_FOUND_MESSAGE = "reservation does not exist"
 CAPACITY_EXCEEDED_MESSAGE = "more attendees than the room capacity"
 ROOM_CLOSED_MESSAGE = "room is closed for reservations"
 ALREADY_STARTED_MESSAGE = "reservation has already started"
-CONFLICT_MESSAGE_TEMPLATE = "room already booked"
+CONFLICT_MESSAGE_TEMPLATE = "room already booked by reservation {conflicting_id}"
 
 
 class RoombookError(Exception):

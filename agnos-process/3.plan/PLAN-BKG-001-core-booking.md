@@ -100,7 +100,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-BKG-006: Name conflicting reservation in message
 - **Tier**: S
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: The conflict message template omitted the identifier of the existing reservation; add it.
 - **Requirement refs**: RQ-BKG-003
 - **ADR refs**: None
@@ -110,5 +110,5 @@ This plan implements the tasks in the format specified below.
   - **Then** it contains the identifier of the existing reservation
 - **Dependencies**: TASK-BKG-003
 - **Assignee**: Human
-- **Verification**: Pending.
+- **Verification**: N/A (Tier S)
 - **Assumptions**: None
