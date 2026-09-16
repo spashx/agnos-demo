@@ -3,7 +3,7 @@
 Motivated by: RQ-BKG-002, RQ-BKG-003, RQ-BKG-005 (FTR-BKG-001); builds on ADR-BKG-001.
 
 ## Status
-Accepted
+Superseded by ADR-BKG-003
 
 ## Context
 The first increments of the booking service need a repository quickly, to prove the rules. No requirement

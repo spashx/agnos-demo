@@ -17,7 +17,7 @@ ADR-BKG-001|1-80|Accepted|Service code structure
 DEC-BKG-001|15-18||Ports-and-adapters layering
 DEC-BKG-002|19-22||Rule objects per validity check
 @agnos-process/2.architecture/ADR-BKG-002-in-memory-reservation-storage.md
-ADR-BKG-002|1-55|Accepted|Initial reservation storage
+ADR-BKG-002|1-55|Superseded by ADR-BKG-003|Initial reservation storage
 DEC-BKG-003|14-17||In-memory dictionary for reservations
 @agnos-process/2.architecture/ADR-BKG-003-json-file-reservation-storage.md
 ADR-BKG-003|1-67|Accepted|Durable reservation storage
