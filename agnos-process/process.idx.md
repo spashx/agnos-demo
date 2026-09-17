@@ -31,6 +31,6 @@ TASK-BKG-004|67-83|Done|Implement room availability rules
 TASK-BKG-005|84-100|Done|Implement reservation cancellation
 TASK-BKG-006|101-114|Done|Name conflicting reservation in message
 @agnos-process/3.plan/PLAN-BKG-002-persistence.md
-PLAN-BKG-002|1-49||Durable reservations
-TASK-BKG-007|16-33|Not Started|Implement JSON file repository
-TASK-BKG-008|34-49|Not Started|Implement repository factory
+PLAN-BKG-002|1-50||Durable reservations
+TASK-BKG-007|16-34|Done|Implement JSON file repository
+TASK-BKG-008|35-50|Not Started|Implement repository factory

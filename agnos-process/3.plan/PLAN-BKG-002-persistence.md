@@ -15,7 +15,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-BKG-007: Implement JSON file repository
 - **Tier**: L
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Add the atomic file writer and the file-backed repository implementing the repository
   port, with a dedicated error for a corrupted data file.
 - **Requirement refs**: RQ-BKG-007
@@ -28,7 +28,8 @@ This plan implements the tasks in the format specified below.
   - **And** a corrupted file raises the storage-corrupted error
 - **Dependencies**: TASK-BKG-002, TASK-BKG-005
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `python -m unittest tests.test_atomic_file tests.test_file_repository` (in `service/`):
+  Ran 10 tests, OK (restart, interrupted save, corrupted file).
 - **Assumptions**: Timestamps are stored as ISO 8601 text with their UTC offset.
 
 ### TASK-BKG-008: Implement repository factory
