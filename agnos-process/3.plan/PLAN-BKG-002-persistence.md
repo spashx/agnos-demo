@@ -34,7 +34,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-BKG-008: Implement repository factory
 - **Tier**: M
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Add the factory that returns the file repository when the data-file setting is present
   and the in-memory repository otherwise.
 - **Requirement refs**: RQ-BKG-007
@@ -46,5 +46,5 @@ This plan implements the tasks in the format specified below.
   - **And** without the setting an in-memory repository is returned
 - **Dependencies**: TASK-BKG-007
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `python -m unittest tests.test_repository_factory` (in `service/`): Ran 3 tests, OK.
 - **Assumptions**: The setting is the environment variable `ROOMBOOK_DATA_FILE`.

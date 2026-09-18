@@ -33,4 +33,4 @@ TASK-BKG-006|101-114|Done|Name conflicting reservation in message
 @agnos-process/3.plan/PLAN-BKG-002-persistence.md
 PLAN-BKG-002|1-50||Durable reservations
 TASK-BKG-007|16-34|Done|Implement JSON file repository
-TASK-BKG-008|35-50|Not Started|Implement repository factory
+TASK-BKG-008|35-50|Done|Implement repository factory
