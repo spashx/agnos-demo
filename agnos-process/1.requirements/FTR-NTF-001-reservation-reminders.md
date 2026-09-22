@@ -43,14 +43,14 @@ because a notification failed.
 ### RQ-NTF-003: Failed notification retry
 - **Category**: Functional
 - **EARS Type**: Unwanted-behavior
-- **Statement**: IF a notification attempt fails, THEN the booking service SHALL retry until 2 attempts have
+- **Statement**: IF a notification attempt fails, THEN the booking service SHALL retry until 3 attempts have
   been made in total, SHALL log the failure, and SHALL leave the reservation unchanged.
 - **Rationale**: A mail server outage must not break bookings.
 - **Priority**: Must
 - **Acceptance Criteria** (Gherkin):
   - **Given** a notifier that fails every time
   - **When** a reminder is sent
-  - **Then** 2 attempts are made and one failure is logged
+  - **Then** 3 attempts are made and one failure is logged
   - **And** the reservation is unchanged
 - **Dependencies**: RQ-NTF-002
 
