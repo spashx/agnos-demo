@@ -45,8 +45,8 @@ PLAN-BKG-002|1-50||Durable reservations
 TASK-BKG-007|16-34|Done|Implement JSON file repository
 TASK-BKG-008|35-50|Done|Implement repository factory
 @agnos-process/3.plan/PLAN-NTF-001-reminders.md
-PLAN-NTF-001|1-81||Reservation reminders
-TASK-NTF-001|16-32|Not Started|Implement reservation event publishing
-TASK-NTF-002|33-50|Not Started|Implement reminder scheduling
-TASK-NTF-003|51-67|Not Started|Implement retrying notifier
-TASK-NTF-004|68-81|Not Started|Correct reminder lead time
+PLAN-NTF-001|1-82||Reservation reminders
+TASK-NTF-001|16-33|Done|Implement reservation event publishing
+TASK-NTF-002|34-51|Not Started|Implement reminder scheduling
+TASK-NTF-003|52-68|Not Started|Implement retrying notifier
+TASK-NTF-004|69-82|Not Started|Correct reminder lead time

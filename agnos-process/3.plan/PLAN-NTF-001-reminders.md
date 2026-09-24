@@ -15,7 +15,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-NTF-001: Implement reservation event publishing
 - **Tier**: M
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Add the in-process event bus, the reservation-created event and the decorator that
   publishes it after a successful creation.
 - **Requirement refs**: RQ-NTF-001
@@ -27,7 +27,8 @@ This plan implements the tasks in the format specified below.
   - **And** a rejected request publishes nothing
 - **Dependencies**: None
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `python -m unittest tests.test_events tests.test_publishing_create` (in `service/`): Ran 7 tests,
+  OK.
 - **Assumptions**: A subscriber that raises does not stop the other subscribers.
 
 ### TASK-NTF-002: Implement reminder scheduling
