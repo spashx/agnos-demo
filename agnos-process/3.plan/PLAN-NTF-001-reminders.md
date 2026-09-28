@@ -33,7 +33,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-NTF-002: Implement reminder scheduling
 - **Tier**: L
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Add the notifier port with a console notifier and the scheduler that sends one reminder
   per Confirmed reservation when its lead time is reached.
 - **Requirement refs**: RQ-NTF-002, RQ-NTF-004
@@ -46,7 +46,8 @@ This plan implements the tasks in the format specified below.
   - **And** 1000 due reminders are dispatched in less than 1 second
 - **Dependencies**: TASK-NTF-001, TASK-BKG-005
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `python -m unittest tests.test_notifier tests.test_reminder_scheduler` (in `service/`):
+  Ran 8 tests, OK, including the 1000-reminder dispatch under 1 second.
 - **Assumptions**: A reminder is sent once per reservation (the scheduler remembers those sent).
 
 ### TASK-NTF-003: Implement retrying notifier
