@@ -52,7 +52,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-NTF-003: Implement retrying notifier
 - **Tier**: M
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Add the decorator that retries a failing notification up to the maximum number of
   attempts, logs the last failure and never raises.
 - **Requirement refs**: RQ-NTF-003
@@ -64,7 +64,7 @@ This plan implements the tasks in the format specified below.
   - **And** no error reaches the caller
 - **Dependencies**: TASK-NTF-002
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `python -m unittest tests.test_retrying_notifier` (in `service/`): Ran 5 tests, OK.
 - **Assumptions**: No delay between attempts in this version.
 
 ### TASK-NTF-004: Correct reminder lead time
