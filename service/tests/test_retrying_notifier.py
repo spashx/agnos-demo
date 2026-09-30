@@ -60,6 +60,7 @@ class _FixedClock:
 class RetryingNotifierTest(unittest.TestCase):
     """Tests for RetryingNotifier.send (RQ-NTF-003)."""
 
+    # RQ-NTF-003
     def test_given_notifier_failing_every_time_when_send_then_max_attempts_are_made(self) -> None:
         # Given
         inner = _FailingNotifier()
