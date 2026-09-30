@@ -69,7 +69,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-NTF-004: Correct reminder lead time
 - **Tier**: S
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Set the reminder lead time constant to the 15 minutes required.
 - **Requirement refs**: RQ-NTF-002
 - **ADR refs**: None
@@ -79,5 +79,5 @@ This plan implements the tasks in the format specified below.
   - **Then** it is 15 minutes
 - **Dependencies**: TASK-NTF-002
 - **Assignee**: Human
-- **Verification**: Pending.
+- **Verification**: N/A (Tier S)
 - **Assumptions**: None

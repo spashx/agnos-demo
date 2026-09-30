@@ -49,4 +49,4 @@ PLAN-NTF-001|1-83||Reservation reminders
 TASK-NTF-001|16-33|Done|Implement reservation event publishing
 TASK-NTF-002|34-52|Done|Implement reminder scheduling
 TASK-NTF-003|53-69|Done|Implement retrying notifier
-TASK-NTF-004|70-83|Not Started|Correct reminder lead time
+TASK-NTF-004|70-83|Done|Correct reminder lead time

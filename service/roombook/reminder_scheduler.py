@@ -9,7 +9,7 @@ from roombook.domain import ReservationStatus
 from roombook.notifier import Notifier
 from roombook.ports import Clock, ReservationRepository
 
-REMINDER_LEAD_MINUTES = 10
+REMINDER_LEAD_MINUTES = 15
 REMINDER_MESSAGE_TEMPLATE = "reservation {reservation_id} starts at {start}"
 
 
