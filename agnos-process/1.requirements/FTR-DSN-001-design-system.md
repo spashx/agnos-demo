@@ -65,15 +65,15 @@ requirements make it checkable, its sections 0 to 10 are the document designers 
 - **Category**: Non-Functional
 - **NFR Type**: Accessibility
 - **EARS Type**: Unwanted-behavior
-- **Statement**: IF a declared text and background colour pairing has a contrast ratio below 3:1, THEN the
+- **Statement**: IF a declared text and background colour pairing has a contrast ratio below 4.5:1, THEN the
   design-system check SHALL fail.
-- **Metric**: Contrast ratio of every declared pairing at least 3:1.
+- **Metric**: Contrast ratio of every declared pairing at least 4.5:1.
 - **Measurement Method**: Unit test computing the WCAG contrast ratio of each pairing declared in the token file.
 - **Priority**: Must
 - **Acceptance Criteria** (Gherkin):
   - **Given** a pairing of a text token and a surface token
   - **When** its contrast ratio is computed
-  - **Then** a ratio below 3:1 is reported with the names of both tokens
+  - **Then** a ratio below 4.5:1 is reported with the names of both tokens
   - **And** the shipped token file reports no pairing
 - **Dependencies**: RQ-DSN-001
 
