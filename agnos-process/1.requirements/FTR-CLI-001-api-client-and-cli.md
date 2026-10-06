@@ -55,7 +55,7 @@ and a TypeScript client and a command-line tool built on it make them easy to ca
 ### RQ-CLI-004: Unreachable service report
 - **Category**: Functional
 - **EARS Type**: Unwanted-behavior
-- **Statement**: IF the service does not answer within 10 seconds, THEN the client SHALL abort the call and
+- **Statement**: IF the service does not answer within 5 seconds, THEN the client SHALL abort the call and
   throw a network error.
 - **Rationale**: A command must not hang.
 - **Priority**: Must
