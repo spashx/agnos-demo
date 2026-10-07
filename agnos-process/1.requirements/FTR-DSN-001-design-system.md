@@ -133,7 +133,54 @@ When genuinely blocked (no token fits, not clearly one-off, not obviously a new 
 - **P5 Tokens only**: no visual value exists outside `tokens.json`.
 
 ### 2. Foundations (design tokens)
-To be written by the UX designer (RQ-DSN-001).
+Tokens are declared in exactly one file, `client/design/tokens.json`, in three tiers: component tokens
+(`button.primary.background`) alias semantic tokens (`colour.accent.default`) which alias global tokens
+(`colour.blue.600`). An alias is written `{token.name}`.
+
+| Tier | Pattern | Example |
+|---|---|---|
+| Global | `<category>.<family>.<step>` | `colour.slate.900`, `size.space.4` |
+| Semantic | `<category>.<role>.<variant?>` | `colour.surface.elevated`, `space.default` |
+| Component | `<component>.<part>.<state?>` | `button.primary.backgroundHover` |
+
+#### 2.1 Colour
+- **Global palette** (closed set): white; slate 50, 100, 300, 500, 700, 900; blue 600, 700; green 50, 700;
+  red 50, 700; amber 50, 600.
+- **Semantic roles**: `surface.base`, `surface.elevated`, `surface.recessed`, `border.default`, `focus.ring`,
+  `text.primary`, `text.secondary`, `text.disabled`, `text.onAccent`, `accent.default`, `accent.hover`, and one
+  `strong` and one `surface` token for each status: `success`, `error`, `warning`.
+- **Theming**: light theme only in this release. Component tokens are theme-independent because they alias
+  the semantic tier, so a dark theme later only remaps semantic tokens.
+- **User-overridable colours**: none.
+
+#### 2.2 Typography
+- **Font family**: system sans-serif stack (`font.family.sans`); no web font is downloaded.
+- **Type scale** by role: `type.title` (1.75rem, strong, tight leading), `type.heading` (1.25rem),
+  `type.body` (1rem, normal leading 1.5), `type.caption` (0.875rem).
+- **Dynamic fit**: no text is shrunk to fit; long values wrap.
+
+#### 2.3 Spacing and layout grid
+- **Base unit**: 0.25rem. Global steps `size.space.1`, 2, 3, 4, 6, 8 (0.25 to 2rem).
+- **Spacing scale** by name: `space.hairline`, `space.tight`, `space.inline`, `space.default`, `space.loose`,
+  `space.section`. Components reference the name, never the step.
+- **Scaling model**: all sizes are in `rem`, so they follow the user's font size; only strokes are in pixels.
+
+#### 2.4 Geometry
+- **Corner radius**: `radius.soft` (0.25rem) for controls, `radius.round` (0.5rem) for cards and badges.
+- **Stroke**: `stroke.thin` (1px) for borders, `stroke.thick` (2px) for the focus ring.
+- **Elevation**: flat, no shadow. Cards are separated by a border.
+- **Targets and layout**: `target.min` (2.75rem) minimum control height; `layout.content` (48rem) page width.
+
+#### 2.5 Iconography and imagery
+- **Style**: no icon set and no image. Two Unicode symbols, a check mark and a cross, accompany the
+  open and closed states so they never rely on colour alone.
+- **Sourcing**: text glyphs only, so they stay crisp at any zoom.
+
+#### 2.6 Motion and timing
+- **Duration scale**: `motion.hover` (120ms) for control colour changes, `motion.fade` (200ms) reserved for
+  banners appearing.
+- **Easing**: the browser default for both.
+- **When not to animate**: a result (booking confirmed or refused) appears at once; it is never animated.
 
 ### 3. Component interaction states
 To be written by the UX designer (RQ-DSN-001).
