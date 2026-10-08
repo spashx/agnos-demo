@@ -123,6 +123,7 @@ def _book(wiring: _Wiring) -> dict[str, Any]:
 class ListRoomsTest(unittest.TestCase):
     """Tests for GET /rooms (RQ-CLI-005)."""
 
+    # RQ-CLI-005
     def test_given_catalog_when_get_rooms_then_answers_ok_with_rooms_sorted_by_id(self) -> None:
         # Given
         wiring = _Wiring()
