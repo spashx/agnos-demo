@@ -183,28 +183,122 @@ Tokens are declared in exactly one file, `client/design/tokens.json`, in three t
 - **When not to animate**: a result (booking confirmed or refused) appears at once; it is never animated.
 
 ### 3. Component interaction states
-To be written by the UX designer (RQ-DSN-001).
+| State | Trigger | Visual rule | Notes |
+|---|---|---|---|
+| Idle | no interaction | component tokens of the resting state | |
+| Hover | pointer over a button | `button.*.backgroundHover`, eased by `button.transition` | no effect without a pointer |
+| Active | pointer down | same as hover | no extra rule |
+| Focused | keyboard focus on a control | outline `focus.ring.width` in `focus.ring.colour` | always visible, never colour alone: it is a 2px outline |
+| Disabled | option or control unavailable | `colour.text.disabled` text | the reason is also written (for example "closed") |
+| Selected | chosen option | the browser's native selection | no custom rule |
+| Error | refused request | error banner (`banner.error.*`) | text states the cause |
 
 ### 4. Component catalogue
-To be written by the UX designer (RQ-DSN-001).
+#### Page and Card
+| Field | Value |
+|---|---|
+| Anatomy | page column, card with heading and content |
+| States implemented | Idle |
+| Tokens used | `page.background`, `page.text`, `page.maxWidth`, `page.padding`, `page.gap`, `card.background`, `card.border`, `card.padding`, `card.radius`, `card.gap` |
+| Variants | none |
+
+#### Button
+| Field | Value |
+|---|---|
+| Anatomy | label in a padded box |
+| States implemented | Idle, Hover, Focused |
+| Tokens used | `button.primary.*`, `button.secondary.*`, `button.danger.*`, `button.paddingBlock`, `button.paddingInline`, `button.minHeight`, `button.radius`, `button.transition` |
+| Variants | primary (the main action of a card), secondary (an alternative action), danger (undoes something done) |
+
+#### Field
+| Field | Value |
+|---|---|
+| Anatomy | label above a control (text, number, date and time, or list) |
+| States implemented | Idle, Focused, Disabled |
+| Tokens used | `field.background`, `field.border`, `field.borderFocus`, `field.text`, `field.label`, `field.padding`, `field.minHeight`, `field.radius`, `field.gap` |
+| Variants | none |
+
+#### Table
+| Field | Value |
+|---|---|
+| Anatomy | header row, body rows separated by a thin border |
+| States implemented | Idle |
+| Tokens used | `table.headerBackground`, `table.headerText`, `table.rowBorder`, `table.cellPadding`, `table.width` |
+| Variants | none |
+
+#### Badge
+| Field | Value |
+|---|---|
+| Anatomy | short text with a symbol on a tinted background |
+| States implemented | Idle |
+| Tokens used | `badge.open.*`, `badge.closed.*`, `badge.paddingBlock`, `badge.paddingInline`, `badge.radius` |
+| Variants | open, closed |
+
+#### Banner
+| Field | Value |
+|---|---|
+| Anatomy | message on a tinted background, with an optional action below it |
+| States implemented | Idle |
+| Tokens used | `banner.success.*`, `banner.error.*`, `banner.warning.*`, `banner.padding`, `banner.radius`, `banner.gap` |
+| Variants | success, error, warning |
+
+#### Behaviour owners
+To be completed when the first screens exist: each component will name the requirement that owns its behaviour. This catalogue owns appearance only.
 
 ### 5. Layout patterns
-To be written by the UX designer (RQ-DSN-001).
+- **Single column page**: one centred column of at most `layout.content`, cards stacked with `page.gap`.
+- **Card**: a heading then its content; the heading is the only way to name a card.
+- **Stacked form**: one field per row, label above its control, the actions row at the end.
 
 ### 6. Accessibility and ergonomics
-To be written by the UX designer (RQ-DSN-001).
+- **Contrast**: at least 4.5:1 for every text pairing; the pairings are declared in `tokens.json` (`pairings`)
+  and verified by a test (RQ-DSN-004). Disabled text is exempt, as WCAG allows.
+- **Minimum hit target**: `target.min` (2.75rem, 44 CSS pixels at the default font size) for buttons and fields.
+- **Resizability**: sizes in `rem` and a fluid column; the page stays usable at 200% zoom.
+- **Never colour alone**: badges carry a word and a symbol, banners carry text and an ARIA role, focus is an outline.
 
 ### 7. Framework binding
-To be written by the UX designer (RQ-DSN-001).
+#### 7.1 Token module
+`client/design/tokens.json` holds the tokens. `client/src/ui/tokens.ts` reads it with no window and no
+browser, resolves aliases and checks tiers and contrast. Spec name to CSS name: dots become hyphens behind
+two dashes, so `colour.surface.base` is `--colour-surface-base`.
+
+#### 7.2 Rendering integration
+`client/src/ui/stylesheet.ts` generates a `:root` rule with every token (aliases kept as `var()` references)
+then the component rules, written only with `var()`. The server sends it as `/styles.css`; the views write
+the class names declared once in `client/src/ui/classes.ts`.
+
+#### 7.3 State-to-code mapping
+Hover is `:hover`, keyboard focus is `:focus` on fields and `:focus-visible` on buttons, disabled is the
+`disabled` attribute of an option.
+
+#### 7.4 Prototyping and mockup sync
+Screens are described in `client/design/SCREENS.md` with token names, never values, so there is no second
+palette to drift. The UX designer reviews every change of `tokens.json`.
 
 ### 8. Testability
-To be written by the UX designer (RQ-DSN-001).
+- **Headless verification**: token loading, alias resolution, tier chain, contrast ratios, custom property
+  generation, component rules (`tests/tokens.test.ts`, `tests/stylesheet.test.ts`).
+- **Regression check**: the same stylesheet test scans every source under `client/src/ui/` for hexadecimal
+  colours, colour functions and dimensions (RQ-DSN-005); it is part of the Definition of Done of any UI change.
+- **Visual verification**: the rendering in a browser is reviewed by the UX designer.
 
 ### 9. Governance
-To be written by the UX designer (RQ-DSN-001).
+- **Adding a token**: propose it in `tokens.json` with its tier, name and value, add the pairing if it is a
+  text colour, and use it in the same change.
+- **Changing a value**: never needs a call-site edit; if it does, the token structure has a bug.
+- **Deviating from a mockup value**: record a note in the `notes` entry of `tokens.json` with the rationale.
+- **Deprecating a token**: grep for zero remaining references first, then remove it.
+- **Document ownership**: the UX designer approves changes to this design system.
 
 ### 10. Non-goals
-To be written by the UX designer (RQ-DSN-001).
+- No behaviour: what a button does belongs to the functional requirements of the screens.
+- No dark theme, no icon set and no breakpoints in this release.
 
 ### Appendix: good and bad examples
-To be written by the UX designer (RQ-DSN-001).
+| Bad | Good | Why |
+|---|---|---|
+| `color: #92400e;` in the stylesheet | `color: var(--banner-warning-text);` | Raw literal against a token (rule 1) |
+| `padding: 12px;` on a field | `padding: var(--field-padding);` | Raw size against a token (rule 2) |
+| a second constant for the success green | the `colour.success.strong` token | Same value under two names (rule 4) |
+| `"button.primary.background": "#2563eb"` | `"button.primary.background": "{colour.accent.default}"` | A component token holding a raw value (rule 3) |

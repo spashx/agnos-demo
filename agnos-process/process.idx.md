@@ -13,7 +13,7 @@ RQ-BKG-006|86-100||Closed room rejection
 FTR-BKG-002|1-37||Reservation persistence
 RQ-BKG-007|21-37||Reservation retention across restarts
 @agnos-process/1.requirements/FTR-DSN-001-design-system.md
-FTR-DSN-001|1-210||Design system
+FTR-DSN-001|1-304||Design system
 RQ-DSN-001|18-31||Single token source
 RQ-DSN-002|32-45||Tiered token chain
 RQ-DSN-003|46-61||Stylesheet generation from tokens
