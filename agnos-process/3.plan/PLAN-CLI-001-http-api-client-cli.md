@@ -15,7 +15,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-CLI-001: Implement service HTTP adapter
 - **Tier**: M
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Add the Python HTTP adapter that serves the three routes, runs the use cases and turns
   domain errors into status and error body.
 - **Requirement refs**: RQ-CLI-005
@@ -27,7 +27,7 @@ This plan implements the tasks in the format specified below.
   - **And** a conflict answers 409 with code CONFLICT
 - **Dependencies**: TASK-BKG-005, TASK-BKG-008
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `python -m unittest tests.test_api` (in `service/`): Ran 19 tests, OK.
 - **Assumptions**: Dates travel as ISO 8601 text with a UTC offset.
 
 ### TASK-CLI-002: Implement client transport layer

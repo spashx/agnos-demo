@@ -58,7 +58,7 @@ TASK-BKG-007|16-34|Done|Implement JSON file repository
 TASK-BKG-008|35-50|Done|Implement repository factory
 @agnos-process/3.plan/PLAN-CLI-001-http-api-client-cli.md
 PLAN-CLI-001|1-112||Remote booking access
-TASK-CLI-001|16-32|Not Started|Implement service HTTP adapter
+TASK-CLI-001|16-32|Done|Implement service HTTP adapter
 TASK-CLI-002|33-48|Not Started|Implement client transport layer
 TASK-CLI-003|49-65|Not Started|Implement typed client
 TASK-CLI-004|66-81|Not Started|Implement command-line tool
