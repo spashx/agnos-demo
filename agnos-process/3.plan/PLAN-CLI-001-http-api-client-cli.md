@@ -32,7 +32,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-CLI-002: Implement client transport layer
 - **Tier**: M
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Create the TypeScript project, the HTTP transport with a timeout, and the network error
   and service error classes.
 - **Requirement refs**: RQ-CLI-004, RQ-CLI-002
@@ -43,7 +43,7 @@ This plan implements the tasks in the format specified below.
   - **Then** it is aborted after the timeout and a network error is thrown
 - **Dependencies**: None
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `node --test tests/transport.test.ts` (in `client/`): 7 passed, 0 failed.
 - **Assumptions**: Node 18 or later, using its built-in `fetch`.
 
 ### TASK-CLI-003: Implement typed client

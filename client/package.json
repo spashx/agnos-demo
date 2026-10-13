@@ -1,0 +1,13 @@
+{
+  "name": "roombook-client",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test \"tests/*.test.ts\"",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0",
+    "@types/node": "^22.0.0"
+  }
+}
