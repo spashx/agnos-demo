@@ -16,7 +16,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-DSN-001: Implement token module
 - **Tier**: M
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Add the module that loads the token file, resolves alias chains, rejects a token that
   breaks the three-tier chain and computes the contrast ratio of the declared text and background pairings.
 - **Requirement refs**: RQ-DSN-001, RQ-DSN-002, RQ-DSN-004
@@ -28,7 +28,7 @@ This plan implements the tasks in the format specified below.
   - **And** a token that skips a tier, or a pairing below its minimum, is reported by name
 - **Dependencies**: None
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `node --test tests/tokens.test.ts` (in `client/`): 15 passed, 0 failed.
 - **Assumptions**: Contrast is the WCAG 2.x ratio on colours written as `#rrggbb`.
 
 ### TASK-DSN-002: Implement stylesheet generator

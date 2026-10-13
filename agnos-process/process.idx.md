@@ -57,7 +57,7 @@ TASK-BKG-007|16-34|Done|Implement JSON file repository
 TASK-BKG-008|35-50|Done|Implement repository factory
 @agnos-process/3.plan/PLAN-DSN-001-design-system.md
 PLAN-DSN-001|1-65||Design system
-TASK-DSN-001|17-33|Not Started|Implement token module
+TASK-DSN-001|17-33|Done|Implement token module
 TASK-DSN-002|34-50|Not Started|Implement stylesheet generator
 TASK-DSN-003|51-65|Not Started|Raise warning text contrast
 @agnos-process/3.plan/PLAN-NTF-001-reminders.md
