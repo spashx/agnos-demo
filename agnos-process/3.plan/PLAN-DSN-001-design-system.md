@@ -50,7 +50,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-DSN-003: Raise warning text contrast
 - **Tier**: S
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: The contrast test failed on the warning text (amber 600 on amber 50, 3.07:1). Add amber 800
   to the global palette, point the warning token at it (6.84:1) and record the deviation note in the token file.
 - **Requirement refs**: RQ-DSN-004
@@ -61,5 +61,5 @@ This plan implements the tasks in the format specified below.
   - **Then** it is at least 4.5:1
 - **Dependencies**: TASK-DSN-001
 - **Assignee**: Human
-- **Verification**: Pending.
+- **Verification**: N/A (Tier S)
 - **Assumptions**: None

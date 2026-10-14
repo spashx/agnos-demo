@@ -145,7 +145,7 @@ Tokens are declared in exactly one file, `client/design/tokens.json`, in three t
 
 #### 2.1 Colour
 - **Global palette** (closed set): white; slate 50, 100, 300, 500, 700, 900; blue 600, 700; green 50, 700;
-  red 50, 700; amber 50, 600.
+  red 50, 700; amber 50, 800.
 - **Semantic roles**: `surface.base`, `surface.elevated`, `surface.recessed`, `border.default`, `focus.ring`,
   `text.primary`, `text.secondary`, `text.disabled`, `text.onAccent`, `accent.default`, `accent.hover`, and one
   `strong` and one `surface` token for each status: `success`, `error`, `warning`.
