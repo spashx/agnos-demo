@@ -33,7 +33,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-DSN-002: Implement stylesheet generator
 - **Tier**: M
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Add the generator that exposes every token as a CSS custom property and writes the
   component rules of the catalogue with `var()` references only, plus the shared class names.
 - **Requirement refs**: RQ-DSN-003, RQ-DSN-004, RQ-DSN-005
@@ -45,7 +45,7 @@ This plan implements the tasks in the format specified below.
   - **And** a scan of the interface sources finds no raw colour or dimension literal
 - **Dependencies**: TASK-DSN-001, TASK-DSN-003
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `node --test tests/stylesheet.test.ts` (in `client/`): 9 passed, 0 failed.
 - **Assumptions**: The component rules are generated in TypeScript and sent by the server; no CSS file is stored.
 
 ### TASK-DSN-003: Raise warning text contrast
