@@ -48,7 +48,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-CLI-003: Implement typed client
 - **Tier**: M
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Add the response types and the client with its three functions, turning error bodies into
   service errors.
 - **Requirement refs**: RQ-CLI-001, RQ-CLI-002
@@ -60,7 +60,7 @@ This plan implements the tasks in the format specified below.
   - **And** successful calls return typed results
 - **Dependencies**: TASK-CLI-002, TASK-CLI-001
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `node --test tests/client.test.ts` (in `client/`): 8 passed, 0 failed.
 - **Assumptions**: None
 
 ### TASK-CLI-004: Implement command-line tool
