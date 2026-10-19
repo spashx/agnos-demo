@@ -243,7 +243,16 @@ Tokens are declared in exactly one file, `client/design/tokens.json`, in three t
 | Variants | success, error, warning |
 
 #### Behaviour owners
-To be completed when the first screens exist: each component will name the requirement that owns its behaviour. This catalogue owns appearance only.
+| Component | Behaviour owner |
+|---|---|
+| Page and Card | RQ-WEB-001 |
+| Button | RQ-WEB-002, RQ-WEB-004 |
+| Field | RQ-WEB-002, RQ-WEB-006 |
+| Table | RQ-WEB-001 |
+| Badge | RQ-WEB-001, RQ-WEB-006 |
+| Banner | RQ-WEB-003, RQ-WEB-005 |
+
+This catalogue owns appearance only; each requirement above owns the behaviour of the component.
 
 ### 5. Layout patterns
 - **Single column page**: one centred column of at most `layout.content`, cards stacked with `page.gap`.
