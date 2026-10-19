@@ -61,7 +61,7 @@ PLAN-CLI-001|1-112||Remote booking access
 TASK-CLI-001|16-32|Done|Implement service HTTP adapter
 TASK-CLI-002|33-48|Done|Implement client transport layer
 TASK-CLI-003|49-65|Done|Implement typed client
-TASK-CLI-004|66-81|Not Started|Implement command-line tool
+TASK-CLI-004|66-81|Done|Implement command-line tool
 TASK-CLI-005|82-96|Not Started|Correct usage text
 TASK-CLI-006|97-112|Not Started|Implement service start command
 @agnos-process/3.plan/PLAN-NTF-001-reminders.md

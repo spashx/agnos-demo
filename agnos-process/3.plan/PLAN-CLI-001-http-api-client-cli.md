@@ -65,7 +65,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-CLI-004: Implement command-line tool
 - **Tier**: M
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Add the `rooms`, `book` and `cancel` commands on top of the client, with exit codes.
 - **Requirement refs**: RQ-CLI-003
 - **ADR refs**: ADR-CLI-001 (DEC-CLI-002)
@@ -76,7 +76,7 @@ This plan implements the tasks in the format specified below.
   - **And** a rejected request prints the error code and exits with a non-zero code
 - **Dependencies**: TASK-CLI-003
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `node --test tests/cli.test.ts` (in `client/`): 9 passed, 0 failed.
 - **Assumptions**: Arguments are positional, no option parsing library.
 
 ### TASK-CLI-005: Correct usage text
