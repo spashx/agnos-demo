@@ -81,7 +81,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-CLI-005: Correct usage text
 - **Tier**: S
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Correct the program name in the usage text.
 - **Requirement refs**: RQ-CLI-003
 - **ADR refs**: None
@@ -91,7 +91,7 @@ This plan implements the tasks in the format specified below.
   - **Then** it names the program `roombook`
 - **Dependencies**: TASK-CLI-004
 - **Assignee**: Human
-- **Verification**: Pending.
+- **Verification**: N/A (Tier S)
 - **Assumptions**: None
 
 ### TASK-CLI-006: Implement service start command

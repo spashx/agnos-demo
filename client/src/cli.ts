@@ -7,7 +7,7 @@ import { NetworkError, ServiceError } from "./errors.ts";
 import { FetchTransport } from "./transport.ts";
 import type { Reservation, Room } from "./types.ts";
 
-export const CLI_USAGE = "usage: roombok <rooms|book|cancel> [options]";
+export const CLI_USAGE = "usage: roombook <rooms|book|cancel> [options]";
 
 const COMMAND_ROOMS = "rooms";
 const COMMAND_BOOK = "book";
