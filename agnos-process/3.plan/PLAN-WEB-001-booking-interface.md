@@ -16,7 +16,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-WEB-001: Implement page views
 - **Tier**: M
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Add the wording of the interface in one module, the routes and form field names, and the view
   functions that render the rooms table, the booking and cancel forms, the banners and the page, using only the
   class names of the design system.
@@ -30,7 +30,7 @@ This plan implements the tasks in the format specified below.
   - **And** service data containing markup is escaped
 - **Dependencies**: TASK-DSN-002
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `node --test tests/views.test.ts` (in `client/`): 13 passed, 0 failed.
 - **Assumptions**: The status symbols are the Unicode check mark and cross, as section 2.5 of FTR-DSN-001 decides.
 
 ### TASK-WEB-002: Implement booking application
