@@ -63,7 +63,7 @@ TASK-CLI-002|33-48|Done|Implement client transport layer
 TASK-CLI-003|49-65|Done|Implement typed client
 TASK-CLI-004|66-81|Done|Implement command-line tool
 TASK-CLI-005|82-96|Done|Correct usage text
-TASK-CLI-006|97-112|Not Started|Implement service start command
+TASK-CLI-006|97-112|Done|Implement service start command
 @agnos-process/3.plan/PLAN-NTF-001-reminders.md
 PLAN-NTF-001|1-83||Reservation reminders
 TASK-NTF-001|16-33|Done|Implement reservation event publishing

@@ -96,7 +96,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-CLI-006: Implement service start command
 - **Tier**: M
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Add the service's entry point, which loads the rooms file, wires the use cases to the HTTP
   adapter and serves it, and the rooms file of the office.
 - **Requirement refs**: RQ-CLI-006, RQ-CLI-005
@@ -108,5 +108,5 @@ This plan implements the tasks in the format specified below.
   - **And** the entry point serves on 127.0.0.1, port 8080
 - **Dependencies**: TASK-CLI-001
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `python -m unittest tests.test_main` (in `service/`): Ran 4 tests, OK.
 - **Assumptions**: No reminder is scheduled by the entry point: reminders need a mail adapter, not yet chosen.
