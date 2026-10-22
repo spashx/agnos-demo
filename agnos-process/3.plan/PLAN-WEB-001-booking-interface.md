@@ -35,7 +35,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-WEB-002: Implement booking application
 - **Tier**: M
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Add the application that routes a request to the page, the booking or the cancellation
   through the typed client, words each service error code, keeps the typed values after a refusal and shows
   the unavailable page when the service does not answer.
@@ -48,7 +48,7 @@ This plan implements the tasks in the format specified below.
   - **And** a service that does not answer gives a 503 page without forms
 - **Dependencies**: TASK-WEB-001, TASK-CLI-003
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `node --test tests/app.test.ts` (in `client/`): 15 passed, 0 failed.
 - **Assumptions**: Local times typed in the form are booked in UTC (+00:00) until time zones are required.
 
 ### TASK-WEB-003: Implement web server
