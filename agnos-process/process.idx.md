@@ -99,8 +99,8 @@ TASK-NTF-002|34-52|Done|Implement reminder scheduling
 TASK-NTF-003|53-69|Done|Implement retrying notifier
 TASK-NTF-004|70-83|Done|Correct reminder lead time
 @agnos-process/3.plan/PLAN-WEB-001-booking-interface.md
-PLAN-WEB-001|1-84||Booking web interface
+PLAN-WEB-001|1-85||Booking web interface
 TASK-WEB-001|17-35|Done|Implement page views
 TASK-WEB-002|36-53|Done|Implement booking application
-TASK-WEB-003|54-70|Not Started|Implement web server
-TASK-WEB-004|71-84|Not Started|Correct booking button wording
+TASK-WEB-003|54-71|Done|Implement web server
+TASK-WEB-004|72-85|Not Started|Correct booking button wording

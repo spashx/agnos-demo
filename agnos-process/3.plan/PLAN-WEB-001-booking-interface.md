@@ -53,7 +53,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-WEB-003: Implement web server
 - **Tier**: L
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: Add the Node HTTP server that translates requests to the application, serves the page and the
   stylesheet generated from the tokens, limits the size of a posted body, and starts when the file is run.
 - **Requirement refs**: RQ-WEB-001, RQ-WEB-002, RQ-DSN-003
@@ -65,7 +65,8 @@ This plan implements the tasks in the format specified below.
   - **And** a body larger than the limit answers 413
 - **Dependencies**: TASK-WEB-002, TASK-DSN-002
 - **Assignee**: AI
-- **Verification**: Pending.
+- **Verification**: `node --test "tests/*.test.ts"` (in `client/`): 81 passed, 0 failed; page, booking, conflict and
+  cancellation checked by hand against a running service.
 - **Assumptions**: The server listens on 127.0.0.1, port 3000 unless `ROOMBOOK_UI_PORT` is set.
 
 ### TASK-WEB-004: Correct booking button wording
