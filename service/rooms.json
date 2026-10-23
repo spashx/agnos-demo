@@ -1,0 +1,6 @@
+[
+  {"id": "atlas", "name": "Atlas", "capacity": 8, "open": true},
+  {"id": "boreal", "name": "Boreal", "capacity": 4, "open": true},
+  {"id": "cirrus", "name": "Cirrus", "capacity": 12, "open": true},
+  {"id": "delta", "name": "Delta", "capacity": 2, "open": false}
+]
