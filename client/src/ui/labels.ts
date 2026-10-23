@@ -18,7 +18,7 @@ export const LABEL = {
   fieldStart: "Start",
   fieldEnd: "End",
   fieldAttendees: "Attendees",
-  bookButton: "Submit",
+  bookButton: "Book this room",
   cancelHeading: "Cancel a reservation",
   fieldReservationId: "Reservation identifier",
   cancelButton: "Cancel reservation",

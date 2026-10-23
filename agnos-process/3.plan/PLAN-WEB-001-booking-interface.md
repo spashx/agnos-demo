@@ -71,7 +71,7 @@ This plan implements the tasks in the format specified below.
 
 ### TASK-WEB-004: Correct booking button wording
 - **Tier**: S
-- **Status**: Not Started
+- **Status**: Done
 - **Description**: After the UX review, rename the booking button from Submit to Book this room.
 - **Requirement refs**: RQ-WEB-002
 - **ADR refs**: None
@@ -81,5 +81,5 @@ This plan implements the tasks in the format specified below.
   - **Then** its button reads Book this room
 - **Dependencies**: TASK-WEB-001
 - **Assignee**: Human
-- **Verification**: Pending.
+- **Verification**: N/A (Tier S)
 - **Assumptions**: None

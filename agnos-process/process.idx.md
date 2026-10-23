@@ -103,4 +103,4 @@ PLAN-WEB-001|1-85||Booking web interface
 TASK-WEB-001|17-35|Done|Implement page views
 TASK-WEB-002|36-53|Done|Implement booking application
 TASK-WEB-003|54-71|Done|Implement web server
-TASK-WEB-004|72-85|Not Started|Correct booking button wording
+TASK-WEB-004|72-85|Done|Correct booking button wording
